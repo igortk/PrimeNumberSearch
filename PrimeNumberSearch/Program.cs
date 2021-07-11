@@ -12,16 +12,13 @@ namespace PrimeNumberSearch
                 int[] arrayInt;
                 string[] inputLine = Console.ReadLine().Trim().Split(' ');
                 arrayInt = new int[inputLine.Length];
-                if (arrayInt.Length <= 2 && arrayInt.Length>=10)
-                {
-                    for (int i = 0; i < arrayInt.Length; i++)
-                    {
-                        arrayInt[i] = int.Parse(inputLine[i]);
-                    }
 
-                    Console.WriteLine(PrimeFactorDetector.getMaxPrime(arrayInt));
+                for (int i = 0; i < arrayInt.Length; i++)
+                {
+                    arrayInt[i] = Convert.ToInt32(inputLine[i]);
                 }
-                Console.WriteLine("Array must be of size (2<= length <=10)");
+
+                Console.WriteLine(PrimeFactorDetector.getMaxPrime(arrayInt));
             }
             catch (Exception)
             {
